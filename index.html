@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadoras Financieras Gratis y Rápidas - IVA, IRPF y Porcentajes</title>
-    <meta name="description" content="Calculadoras financieras online gratuitas. Calcula y desglosa el IVA, obtén retenciones de IRPF para autónomos y calcula porcentajes de forma instantánea.">
+    <title>Calculadoras Financieras Gratis y Rápidas - IVA, IRPF, Porcentajes y Descuentos</title>
+    <meta name="description" content="Calculadoras financieras online gratuitas. Calcula y desglosa el IVA, obtén retenciones de IRPF para autónomos, calcula porcentajes, descuentos y márgenes comerciales de forma instantánea.">
     <link rel="stylesheet" href="styles.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8888754053179200"
+    <script async src="https://googlesyndication.com"
      crossorigin="anonymous"></script>
 </head>
 <body>
@@ -62,7 +62,7 @@
             </div>
         </section>
 
-        <!-- 3. NUEVA CALCULADORA DE IRPF (Para facturas y retenciones básicas) -->
+        <!-- 3. CALCULADORA DE IRPF (Para facturas y retenciones básicas) -->
         <section class="caja-calculadora">
             <h2>Calculadora de Retención de IRPF</h2>
             <div class="grupo-input">
@@ -84,6 +84,46 @@
             <div id="resultadoIrpf" class="resultado hidden">
                 <p><strong>Importe Retenido (Hacienda):</strong> <span id="resRetencionIrpf">0</span>€</p>
                 <p class="total"><strong>Líquido a percibir (Neto):</strong> <span id="resNetoIrpf">0</span>€</p>
+            </div>
+        </section>
+
+        <!-- 4. CALCULADORA DE DESCUENTOS -->
+        <section class="caja-calculadora">
+            <h2>Calculadora de Descuentos</h2>
+            <div class="grupo-input">
+                <label for="precioOriginal">Precio original (€):</label>
+                <input type="number" id="precioOriginal" placeholder="Ej: 80" min="0">
+            </div>
+            <div class="grupo-input">
+                <label for="porcentajeDescuento">Porcentaje de descuento (%):</label>
+                <input type="number" id="porcentajeDescuento" placeholder="Ej: 20" min="0">
+            </div>
+            <div class="botones">
+                <button onclick="calcularDescuento()">Calcular Descuento</button>
+            </div>
+            <div id="resultadoDescuento" class="resultado hidden">
+                <p><strong>Dinero Ahorrado:</strong> <span id="resAhorrado">0</span>€</p>
+                <p class="total"><strong>Precio Final Rebajado:</strong> <span id="resPrecioFinal">0</span>€</p>
+            </div>
+        </section>
+
+        <!-- 5. CALCULADORA DE MARGEN DE BENEFICIO -->
+        <section class="caja-calculadora">
+            <h2>Calculadora de Margen de Beneficio</h2>
+            <div class="grupo-input">
+                <label for="costeProducto">Coste del producto o servicio (€):</label>
+                <input type="number" id="costeProducto" placeholder="Ej: 50" min="0">
+            </div>
+            <div class="grupo-input">
+                <label for="margenDeseado">Margen de beneficio deseado (%):</label>
+                <input type="number" id="margenDeseado" placeholder="Ej: 30" min="0">
+            </div>
+            <div class="botones">
+                <button onclick="calcularMargen()">Calcular Precio de Venta</button>
+            </div>
+            <div id="resultadoMargen" class="resultado hidden">
+                <p><strong>Beneficio Neto:</strong> <span id="resBeneficioNeto">0</span>€</p>
+                <p class="total"><strong>Precio de Venta Recomendado:</strong> <span id="resPrecioVenta">0</span>€</p>
             </div>
         </section>
 
@@ -116,25 +156,3 @@
             <ul>
                 <li><strong>Autónomos General (15%):</strong> Aplicado por defecto a la mayoría de profesionales dados de alta en el Impuesto de Actividades Económicas (IAE).</li>
                 <li><strong>Nuevos Autónomos (7%):</strong> Un tipo reducido aplicable durante el año de alta y los dos siguientes, diseñado para favorecer la liquidez al inicio de la actividad económica.</li>
-                <li><strong>Capital / Alquileres (19%):</strong> Retención estándar aplicada sobre los ingresos derivados del arrendamiento de locales comerciales u oficinas.</li>
-            </ul>
-
-            <h3>Fórmula para calcular la retención de IRPF</h3>
-            <p>Para calcular con precisión cuánto dinero se retendrá en una factura emitida, debes aplicar el porcentaje correspondiente directamente sobre la base imponible acordada:</p>
-            <p><code>Dinero Retenido = Base Bruta × (Porcentaje IRPF ÷ 100)</code></p>
-            <p>Para conocer la cuantía del dinero líquido que vas a recibir de tu cliente, restas esa retención al bruto inicial: <code>Neto a percibir = Base Bruta − Dinero Retenido</code></p>
-        </section>
-    </main>
-
-    <<footer style="text-align: center; padding: 20px; color: #7f8c8d;">
-        <p>&copy; 2026 Mis Calculadoras Pro. Todos los derechos reservados.</p>
-        <p style="margin-top: 10px; font-size: 14px;">
-            <a href="aviso-legal.html" style="color: #7f8c8d; text-decoration: none; font-weight: bold; margin: 0 10px;">Aviso Legal</a> | 
-            <a href="privacidad.html" style="color: #7f8c8d; text-decoration: none; font-weight: bold; margin: 0 10px;">Política de Privacidad y Cookies</a>
-        </p>
-    </footer>
-
-
-    <script src="script.js"></script>
-</body>
-</html>
