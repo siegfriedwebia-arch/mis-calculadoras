@@ -14,15 +14,13 @@
     </header>
 
     <main class="contenedor">
-        <!-- 1. SECCIÓN DE LA CALCULADORA DE IVA -->
+        <!-- 1. CALCULADORA DE IVA -->
         <section class="caja-calculadora">
             <h2>Calculadora de IVA</h2>
-            
             <div class="grupo-input">
                 <label for="cantidad">Introduce el importe (€):</label>
                 <input type="number" id="cantidad" placeholder="Ej: 100" min="0">
             </div>
-
             <div class="grupo-input">
                 <label for="tipoIva">Tipo de IVA:</label>
                 <select id="tipoIva">
@@ -31,12 +29,10 @@
                     <option value="4">Superreducido (4%)</option>
                 </select>
             </div>
-
             <div class="botones">
                 <button onclick="calcularIva(true)">Añadir IVA</button>
                 <button onclick="calcularIva(false)">Quitar IVA (Desglosar)</button>
             </div>
-
             <div id="resultado" class="resultado hidden">
                 <p><strong>Base Imponible:</strong> <span id="resBase">0</span>€</p>
                 <p><strong>Importe del IVA:</strong> <span id="resIva">0</span>€</p>
@@ -44,26 +40,47 @@
             </div>
         </section>
 
-        <!-- 2. SECCIÓN DE LA CALCULADORA DE PORCENTAJES -->
+        <!-- 2. CALCULADORA DE PORCENTAJES -->
         <section class="caja-calculadora">
             <h2>Calculadora de Porcentajes</h2>
-            
             <div class="grupo-input">
                 <label for="porcentajeNum">¿Cuánto es el (%)?:</label>
                 <input type="number" id="porcentajeNum" placeholder="Ej: 15" min="0">
             </div>
-
             <div class="grupo-input">
                 <label for="totalNum">De la siguiente cantidad:</label>
                 <input type="number" id="totalNum" placeholder="Ej: 200" min="0">
             </div>
-
             <div class="botones">
                 <button onclick="calcularPorcentaje()">Calcular Porcentaje</button>
             </div>
-
             <div id="resultadoPorcentaje" class="resultado hidden">
                 <p class="total"><strong>El resultado es:</strong> <span id="resPorcentaje">0</span></p>
+            </div>
+        </section>
+
+        <!-- 3. NUEVA CALCULADORA DE IRPF (Para facturas y retenciones básicas) -->
+        <section class="caja-calculadora">
+            <h2>Calculadora de Retención de IRPF</h2>
+            <div class="grupo-input">
+                <label for="baseIrpf">Importe base o bruto (€):</label>
+                <input type="number" id="baseIrpf" placeholder="Ej: 1500" min="0">
+            </div>
+            <div class="grupo-input">
+                <label for="tipoIrpf">Porcentaje de retención IRPF (%):</label>
+                <select id="tipoIrpf">
+                    <option value="15">Autónomos General (15%)</option>
+                    <option value="7">Autónomos Nuevos (7%)</option>
+                    <option value="19">Capital / Alquileres (19%)</option>
+                    <option value="2">Trabajadores Temporal (2%)</option>
+                </select>
+            </div>
+            <div class="botones">
+                <button onclick="calcularIrpf()">Calcular Retención</button>
+            </div>
+            <div id="resultadoIrpf" class="resultado hidden">
+                <p><strong>Importe Retenido (Hacienda):</strong> <span id="resRetencionIrpf">0</span>€</p>
+                <p class="total"><strong>Líquido a percibir (Neto):</strong> <span id="resNetoIrpf">0</span>€</p>
             </div>
         </section>
 
@@ -71,20 +88,19 @@
         <section class="contenido-texto">
             <h2>¿Cómo se calcula el IVA paso a paso?</h2>
             <p>Calcular el Impuesto sobre el Valor Añadido (IVA) es un proceso matemático básico pero fundamental para autónomos, empresas y consumidores. Dependiendo de si necesitas sumar el impuesto o desglosarlo, la fórmula cambia ligeramente.</p>
-            
-            <h3>Fórmula para añadir el IVA</h3>
-            <p>Para sumarle el IVA a un precio base (llamado base imponible), debes multiplicar el importe por 1 más el porcentaje de IVA en formato decimal. Por ejemplo, para un IVA del 21%: <code>Precio Total = Base Imponible × 1.21</code></p>
-
-            <h3>Fórmula para quitar o desglosar el IVA</h3>
-            <p>Si tienes el precio total de un producto con el IVA ya incluido y quieres saber cuánto corresponde al producto y cuánto al impuesto, debes dividir el total entre 1 más el porcentaje de IVA en decimal: <code>Base Imponible = Precio Total ÷ 1.21</code></p>
+            <p>Fórmula para añadir el IVA: <code>Precio Total = Base Imponible × 1.21</code></p>
+            <p>Fórmula para desglosar el IVA: <code>Base Imponible = Precio Total ÷ 1.21</code></p>
 
             <h2>¿Cómo calcular un porcentaje a mano?</h2>
-            <p>El cálculo de porcentajes es una de las operaciones matemáticas más utilizadas en el día a día, ya sea para calcular un descuento en una tienda, el interés de un préstamo o una comisión de ventas.</p>
-            
-            <h3>Fórmula básica del porcentaje</h3>
-            <p>Para hallar un porcentaje concreto de una cantidad, la regla matemática consiste en multiplicar la cantidad inicial por el porcentaje que deseas obtener, y posteriormente dividir el resultado entre 100.</p>
+            <p>El cálculo de porcentajes es una de las operaciones matemáticas más utilizadas en el día a día. La regla consiste en multiplicar la cantidad inicial por el porcentaje que deseas obtener, y posteriormente dividir el resultado entre 100.</p>
             <p>La fórmula se expresa de la siguiente manera: <code>Resultado = (Cantidad × Porcentaje) ÷ 100</code></p>
-            <p>Por ejemplo, si quieres saber cuánto es el 15% de 200, la operación sería: <code>(200 × 15) ÷ 100 = 3000 ÷ 100 = 30</code>.</p>
+
+            <h2>¿Cómo funciona la retención del IRPF?</h2>
+            <p>El Impuesto sobre la Renta de las Personas Físicas (IRPF) es un impuesto progresivo que grava la renta de los ciudadanos en España. En las facturas de profesionales autónomos o en las nóminas de los trabajadores, se aplica una retención que actúa como un adelanto a Hacienda.</p>
+            <h3>Fórmula para calcular la retención de IRPF</h3>
+            <p>Para calcular cuánto dinero se te va a retener, debes aplicar el porcentaje correspondiente sobre la base imponible o el sueldo bruto:</p>
+            <p><code>Dinero Retenido = Base Bruta × (Porcentaje IRPF ÷ 100)</code></p>
+            <p>Para saber el dinero neto que vas a recibir en mano, restas esa retención al bruto inicial: <code>Neto a percibir = Base Bruta − Dinero Retenido</code></p>
         </section>
     </main>
 
