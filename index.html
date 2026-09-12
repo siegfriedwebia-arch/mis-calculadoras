@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IVA Gratis y Rápida</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Calculadoras Financieras Gratuitas</h1>
+        <p>Herramientas sencillas para tu día a día</p>
+    </header>
+
+    <main class="contenedor">
+        <!-- SECCIÓN DE LA CALCULADORA -->
+        <section class="caja-calculadora">
+            <h2>Calculadora de IVA</h2>
+            
+            <div class="grupo-input">
+                <label for="cantidad">Introduce el importe (€):</label>
+                <input type="number" id="cantidad" placeholder="Ej: 100" min="0">
+            </div>
+
+            <div class="grupo-input">
+                <label for="tipoIva">Tipo de IVA:</label>
+                <select id="tipoIva">
+                    <option value="21">General (21%)</option>
+                    <option value="10">Reducido (10%)</option>
+                    <option value="4">Superreducido (4%)</option>
+                </select>
+            </div>
+
+            <div class="botones">
+                <button onclick="calcularIva(true)">Añadir IVA</button>
+                <button onclick="calcularIva(false)">Quitar IVA (Desglosar)</button>
+            </div>
+
+            <div id="resultado" class="resultado hidden">
+                <p><strong>Base Imponible:</strong> <span id="resBase">0</span>€</p>
+                <p><strong>Importe del IVA:</strong> <span id="resIva">0</span>€</p>
+                <p class="total"><strong>Total:</strong> <span id="resTotal">0</span>€</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE TEXTO SEO (OBLIGATORIO PARA GOOGLE ADSENSE) -->
+        <section class="contenido-texto">
+            <h2>¿Cómo se calcula el IVA paso a paso?</h2>
+            <p>Calcular el Impuesto sobre el Valor Añadido (IVA) es un proceso matemático básico pero fundamental para autónomos, empresas y consumidores. Dependiendo de si necesitas sumar el impuesto o desglosarlo, la fórmula cambia ligeramente.</p>
+            
+            <h3>Fórmula para añadir el IVA</h3>
+            <p>Para sumarle el IVA a un precio base (llamado base imponible), debes multiplicar el importe por 1 más el porcentaje de IVA en formato decimal. Por ejemplo, para un IVA del 21%:</p>
+            <p><code>Precio Total = Base Imponible × 1.21</code></p>
+
+            <h3>Fórmula para quitar o desglosar el IVA</h3>
+            <p>Si tienes el precio total de un producto con el IVA ya incluido y quieres saber cuánto corresponde al producto y cuánto al impuesto, debes dividir el total entre 1 más el porcentaje de IVA en decimal:</p>
+            <p><code>Base Imponible = Precio Total ÷ 1.21</code></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Mis Calculadoras Online. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
