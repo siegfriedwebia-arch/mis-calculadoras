@@ -86,7 +86,47 @@
             </div>
         </section>
 
-        <!-- SECCIÓN DE TEXTO SEO (ENRIQUECIDA) -->
+        <!-- 4. CALCULADORA DE DESCUENTOS -->
+        <section class="caja-calculadora">
+            <h2>Calculadora de Descuentos</h2>
+            <div class="grupo-input">
+                <label for="precioOriginal">Precio original (€):</label>
+                <input type="number" id="precioOriginal" placeholder="Ej: 80" min="0">
+            </div>
+            <div class="grupo-input">
+                <label for="porcentajeDescuento">Porcentaje de descuento (%):</label>
+                <input type="number" id="porcentajeDescuento" placeholder="Ej: 20" min="0">
+            </div>
+            <div class="botones">
+                <button onclick="calcularDescuento()">Calcular Descuento</button>
+            </div>
+            <div id="resultadoDescuento" class="resultado hidden">
+                <p><strong>Dinero Ahorrado:</strong> <span id="resAhorrado">0</span>€</p>
+                <p class="total"><strong>Precio Final Rebajado:</strong> <span id="resPrecioFinal">0</span>€</p>
+            </div>
+        </section>
+
+        <!-- 5. CALCULADORA DE MARGEN DE BENEFICIO -->
+        <section class="caja-calculadora">
+            <h2>Calculadora de Margen de Beneficio</h2>
+            <div class="grupo-input">
+                <label for="costeProducto">Coste del producto o servicio (€):</label>
+                <input type="number" id="costeProducto" placeholder="Ej: 50" min="0">
+            </div>
+            <div class="grupo-input">
+                <label for="margenDeseado">Margen de beneficio deseado (%):</label>
+                <input type="number" id="margenDeseado" placeholder="Ej: 30" min="0">
+            </div>
+            <div class="botones">
+                <button onclick="calcularMargen()">Calcular Precio de Venta</button>
+            </div>
+            <div id="resultadoMargen" class="resultado hidden">
+                <p><strong>Beneficio Neto:</strong> <span id="resBeneficioNeto">0</span>€</p>
+                <p class="total"><strong>Precio de Venta Recomendado:</strong> <span id="resPrecioVenta">0</span>€</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE TEXTO SEO -->
         <section class="contenido-texto">
             <h2>¿Cómo se calcula el IVA paso a paso?</h2>
             <p>Calcular el Impuesto sobre el Valor Añadido (IVA) es un proceso matemático básico pero fundamental para autónomos, empresas y consumidores. Dependiendo de si necesitas sumar el impuesto o desglosarlo, la fórmula cambia ligeramente.</p>
@@ -95,7 +135,7 @@
 
             <h2>¿Cómo calcular un porcentaje a mano?</h2>
             <p>El cálculo de porcentajes es una de las operaciones matemáticas más utilizadas en el día a día. La regla consiste en multiplicar la cantidad inicial por el porcentaje que deseas obtener, y posteriormente dividir el resultado entre 100.</p>
-            <p>La fórmula se expresa de la siguiente manera: <code>Resultado = (Cantidad × Porcentaje) ÷ 100</code></p>
+            <p>La fórmula se expresa de la Administrative: <code>Resultado = (Cantidad × Porcentaje) ÷ 100</code></p>
 
             <h2>¿Cómo funciona la retención del IRPF?</h2>
             <p>El Impuesto sobre la Renta de las Personas Físicas (IRPF) es un impuesto progresivo que grava la renta de los ciudadanos en España. En las facturas de profesionales autónomos o en las nóminas de los trabajadores, se aplica una retención que actúa como un adelanto a Hacienda.</p>
