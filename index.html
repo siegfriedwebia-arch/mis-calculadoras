@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadoras Financieras Gratis y Rápidas - IVA, IRPF, Porcentajes y Descuentos</title>
-    <meta name="description" content="Calculadoras financieras online gratuitas. Calcula y desglosa el IVA, obtén retenciones de IRPF para autónomos, calcula porcentajes, descuentos y márgenes comerciales de forma instantánea.">
+    <title>Calculadoras Financieras Gratis y Rápidas</title>
     <link rel="stylesheet" href="styles.css">
     <script async src="https://googlesyndication.com"
      crossorigin="anonymous"></script>
@@ -62,7 +61,7 @@
             </div>
         </section>
 
-        <!-- 3. CALCULADORA DE IRPF (Para facturas y retenciones básicas) -->
+        <!-- 3. CALCULADORA DE IRPF -->
         <section class="caja-calculadora">
             <h2>Calculadora de Retención de IRPF</h2>
             <div class="grupo-input">
@@ -87,72 +86,34 @@
             </div>
         </section>
 
-        <!-- 4. CALCULADORA DE DESCUENTOS -->
-        <section class="caja-calculadora">
-            <h2>Calculadora de Descuentos</h2>
-            <div class="grupo-input">
-                <label for="precioOriginal">Precio original (€):</label>
-                <input type="number" id="precioOriginal" placeholder="Ej: 80" min="0">
-            </div>
-            <div class="grupo-input">
-                <label for="porcentajeDescuento">Porcentaje de descuento (%):</label>
-                <input type="number" id="porcentajeDescuento" placeholder="Ej: 20" min="0">
-            </div>
-            <div class="botones">
-                <button onclick="calcularDescuento()">Calcular Descuento</button>
-            </div>
-            <div id="resultadoDescuento" class="resultado hidden">
-                <p><strong>Dinero Ahorrado:</strong> <span id="resAhorrado">0</span>€</p>
-                <p class="total"><strong>Precio Final Rebajado:</strong> <span id="resPrecioFinal">0</span>€</p>
-            </div>
-        </section>
-
-        <!-- 5. CALCULADORA DE MARGEN DE BENEFICIO -->
-        <section class="caja-calculadora">
-            <h2>Calculadora de Margen de Beneficio</h2>
-            <div class="grupo-input">
-                <label for="costeProducto">Coste del producto o servicio (€):</label>
-                <input type="number" id="costeProducto" placeholder="Ej: 50" min="0">
-            </div>
-            <div class="grupo-input">
-                <label for="margenDeseado">Margen de beneficio deseado (%):</label>
-                <input type="number" id="margenDeseado" placeholder="Ej: 30" min="0">
-            </div>
-            <div class="botones">
-                <button onclick="calcularMargen()">Calcular Precio de Venta</button>
-            </div>
-            <div id="resultadoMargen" class="resultado hidden">
-                <p><strong>Beneficio Neto:</strong> <span id="resBeneficioNeto">0</span>€</p>
-                <p class="total"><strong>Precio de Venta Recomendado:</strong> <span id="resPrecioVenta">0</span>€</p>
-            </div>
-        </section>
-
-        <!-- SECCIÓN DE TEXTO SEO ENRIQUECIDA (MÁXIMO VALOR PARA GOOGLE ADSENSE) -->
+        <!-- SECCIÓN DE TEXTO SEO (ENRIQUECIDA) -->
         <section class="contenido-texto">
-            <h2>¿Cómo se calcula el IVA paso a paso en España?</h2>
-            <p>Calcular el Impuesto sobre el Valor Añadido (IVA) es un proceso matemático básico pero fundamental para autónomos, empresas y consumidores. Dependiendo de si necesitas sumar el impuesto o desglosarlo de un precio final, la fórmula cambia ligeramente.</p>
-            
-            <h3>Tipos de IVA vigentes</h3>
-            <p>En España coexisten tres tipos impositivos aplicables según el tipo de bien o servicio comercializado:</p>
-            <ul>
-                <li><strong>General (21%):</strong> Se aplica por defecto a la mayoría de productos de consumo, ropa, tecnología, servicios profesionales y electrodomésticos.</li>
-                <li><strong>Reducido (10%):</strong> Aplicable a la mayoría de alimentos, transporte de viajeros, hostelería y viviendas.</li>
-                <li><strong>Superreducido (4%):</strong> Destinado a productos de primera necesidad como pan, leche, frutas, medicamentos, libros y periódicos.</li>
-            </ul>
+            <h2>¿Cómo se calcula el IVA paso a paso?</h2>
+            <p>Calcular el Impuesto sobre el Valor Añadido (IVA) es un proceso matemático básico pero fundamental para autónomos, empresas y consumidores. Dependiendo de si necesitas sumar el impuesto o desglosarlo, la fórmula cambia ligeramente.</p>
+            <p>Fórmula para añadir el IVA: <code>Precio Total = Base Imponible × 1.21</code></p>
+            <p>Fórmula para desglosar el IVA: <code>Base Imponible = Precio Total ÷ 1.21</code></p>
 
-            <p>Fórmula para añadir el IVA: <code>Precio Total = Base Imponible × (1 + (Porcentaje IVA ÷ 100))</code>. Por ejemplo, para un IVA general del 21%: <code>Precio Total = Base Imponible × 1.21</code></p>
-            <p>Fórmula para desglosar el IVA: <code>Base Imponible = Precio Total ÷ (1 + (Porcentaje IVA ÷ 100))</code>. Por ejemplo, para extraer la base imponible de un total con 21% de IVA: <code>Base Imponible = Precio Total ÷ 1.21</code></p>
+            <h2>¿Cómo calcular un porcentaje a mano?</h2>
+            <p>El cálculo de porcentajes es una de las operaciones matemáticas más utilizadas en el día a día. La regla consiste en multiplicar la cantidad inicial por el porcentaje que deseas obtener, y posteriormente dividir el resultado entre 100.</p>
+            <p>La fórmula se expresa de la siguiente manera: <code>Resultado = (Cantidad × Porcentaje) ÷ 100</code></p>
 
-            <h2>¿Cómo calcular un porcentaje a mano de forma rápida?</h2>
-            <p>El cálculo de porcentajes es una de las operaciones matemáticas más utilizadas en las transacciones comerciales, cálculo de comisiones y descuentos de tiendas. La regla consiste en multiplicar la cantidad inicial por el porcentaje que deseas obtener, y posteriormente dividir el resultado final entre 100.</p>
-            <p>La fórmula matemática estándar se expresa de la siguiente manera: <code>Resultado = (Cantidad × Porcentaje) ÷ 100</code></p>
-            <p>Un truco rápido para el cálculo mental consiste en multiplicar ambas cifras eliminando los dos ceros finales si están presentes. Por ejemplo, para hallar el 15% de 200, multiplicamos 15 × 2 = 30.</p>
+            <h2>¿Cómo funciona la retención del IRPF?</h2>
+            <p>El Impuesto sobre la Renta de las Personas Físicas (IRPF) es un impuesto progresivo que grava la renta de los ciudadanos en España. En las facturas de profesionales autónomos o en las nóminas de los trabajadores, se aplica una retención que actúa como un adelanto a Hacienda.</p>
+            <h3>Fórmula para calcular la retención de IRPF</h3>
+            <p>Para calcular cuánto dinero se te va a retener, debes aplicar el porcentaje correspondiente sobre la base imponible o el sueldo bruto:</p>
+            <p><code>Dinero Retenido = Base Bruta × (Porcentaje IRPF ÷ 100)</code></p>
+            <p>Para saber el dinero neto que vas a recibir en mano, restas esa retención al bruto inicial: <code>Neto a percibir = Base Bruta − Dinero Retenido</code></p>
+        </section>
+    </main>
 
-            <h2>¿Cómo funciona la retención del IRPF para autónomos?</h2>
-            <p>El Impuesto sobre la Renta de las Personas Físicas (IRPF) es un tributo de carácter progresivo que grava la renta en España. En las facturas de profesionales autónomos independientes o en las retenciones por arrendamientos urbanos, se aplica una retención porcentual que actúa como un pago a cuenta o anticipo obligatorio para la Agencia Tributaria (Hacienda).</p>
-            
-            <h3>Porcentajes comunes de retención en facturas</h3>
-            <p>El porcentaje a retener varía sustancialmente según la situación censal del profesional o el origen de los rendimientos:</p>
-            <ul>
-                <li><strong>Autónomos General (15%):</strong> Aplicado por defecto a la mayoría de profesionales dados de alta en el Impuesto de Actividades Económicas (IAE).</li>
-                <li><strong>Nuevos Autónomos (7%):</strong> Un tipo reducido aplicable durante el año de alta y los dos siguientes, diseñado para favorecer la liquidez al inicio de la actividad económica.</li>
+    <footer>
+        <p>&copy; 2026 Mis Calculadoras Pro. Todos los derechos reservados.</p>
+        <p style="margin-top: 10px;">
+            <a href="aviso-legal.html" style="color: #7f8c8d; text-decoration: none; font-weight: bold; margin-right: 10px;">Aviso Legal</a> | 
+            <a href="privacidad.html" style="color: #7f8c8d; text-decoration: none; font-weight: bold; margin-left: 10px;">Política de Privacidad y Cookies</a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
