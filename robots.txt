@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /script.js
+Disallow: /styles.css
+
+Sitemap: https://miscalculadoraspro.com
