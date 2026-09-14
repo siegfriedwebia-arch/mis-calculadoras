@@ -5,15 +5,15 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://miscalculadoraspro.comcontacto.html</loc>
+    <loc>https://miscalculadoraspro.com/contacto.html</loc>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://miscalculadoraspro.comaviso-legal.html</loc>
+    <loc>https://miscalculadoraspro.com/aviso-legal.html</loc>
     <priority>0.1</priority>
   </url>
   <url>
-    <loc>https://miscalculadoraspro.comprivacidad.html</loc>
+    <loc>https://miscalculadoraspro.com/privacidad.html</loc>
     <priority>0.1</priority>
   </url>
 </urlset>
