@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://sitemaps.org">
+  <url>
+    <loc>https://miscalculadoraspro.com</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://miscalculadoraspro.comcontacto.html</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://miscalculadoraspro.comaviso-legal.html</loc>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://miscalculadoraspro.comprivacidad.html</loc>
+    <priority>0.1</priority>
+  </url>
+</urlset>
